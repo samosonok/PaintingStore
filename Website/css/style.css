@@ -1,0 +1,352 @@
+*, *::before, *::after {box-sizing: border-box;}
+	
+/*BODY*/
+body {
+	font-family:Arial, Helvetica, sans-serif; /*the font-family property is applied to all elements inside the body. 
+	The value is a prioritized list of font family names: first, Arial will be used if it is available on the user's computer, 
+	followed by Helvetica if Arial is not available, and finally any sans-serif font if neither Arial nor Helvetica are available*/
+	font-size:1em; /*font size is set to 1em*/
+	color:#000000; /*black*/
+	margin-left: 5%; /*set the left margin of an element to 5% of the element's width*/
+	margin-right: 5%; /*set the right margin of an element to 5% of the element's width*/
+	line-height: 1.5; /*set the height of each line of text within an element. It determines 
+	the amount of vertical space between each line of text*/
+	background-color: #e4dff2; /*light purple*/
+}
+
+/*MENU*/
+ul.topnav {
+	list-style-type: none; /* removes the default bullet points or markers that appear next to each list item*/
+	background-color: #3f1e5f; /*purple*/
+	padding: 2%; /* add space between the content of an element and its border*/
+	margin-bottom: 2%; /* add space between the bottom edge of an element and the top edge of the next element*/
+}
+ul.topnav li a {
+	display: block; /*convert inline element ‘a’ to block element*/
+	color: #e4dff2; /*light purple*/
+	text-decoration: none; /*remove decorations to text, such as underlines, overlines, and strikethroughs*/
+	font-family: "Lucida Handwriting";
+	font-size:1.4em; /*specify the size of the font used for text content*/
+	font-variant: small-caps; /*display text in small capitals*/
+}
+ul.topnav li a:hover {background-color: #000000;} /*black*/
+
+ul.topnav li.hide, li.drop{display:none;} /*hide the menu items class of 'hide' and 'drop' when 
+displayed on a mobilescreen, ie, before the media queries */
+/* The class 'toggleclass' is added via jquery when the user
+	clicks on the burger menu icon via the toggle() javascript method.
+	The javascript toggle() method toggles between the hide() and
+	show() methods of javascript for the selected element. */
+ul.topnav.toggleclass li{display:block;} /*set the display type of the list items to block, 
+which means they will be displayed as a block-level element, taking up the full width of their container 
+and creating a new line after each item.*/
+
+/*HEADER*/
+header {
+	text-align: center; /*center the text content within the element's container*/
+	background-color: #eae3d8; /*light grey*/
+}
+header img {width: 100%;} /*set the width of the image to 100% of the available width of its containing element.*/
+
+h1, h2 {
+	font-family: "Times New Roman", Times, serif;
+	font-weight:bold; /*set the text content to be bold*/
+	color: #3f1e5f; /*purple*/
+	text-align: center; /*center the text content within the element's container*/
+	font-style: italic; /*set the text content to be in italic style, making it appear slanted to the right*/
+}
+
+h1 {font-size: 2.4em;} /* the property is applied to all h1 tags in the HTML document and set the size of the text content to be 2.4*/
+
+h2 {font-size: 2.2em;} /* the property is applied to all h2 tags in the HTML document and set the size of the text content to be 2.2*/
+
+/*NAVIGATION*/
+nav li {
+ 	border-bottom: 1px solid #e4dff2; /*light purple*/
+}
+
+nav li a {
+ 	padding: 5px 0 10px 0px; /*T, R, B, L*/
+ 	font-weight: bold; /*set the text content to be bold*/
+}
+nav li:last-child {border-bottom: none;} /*CSS3 Pseudo Class property targeting last list item */
+
+/*MAIN PAGEBODY*/
+main#pagebody {
+ 	max-width:1200px; /*NB: Screen will never get larger than 1200px - will be inherited by Media Queries*/
+ 	margin-left:auto; /*Equal margins on both sides*/
+ 	margin-right:auto; /*Equal margins on both sides*/
+}
+
+/*CONTENT AND IMAGES*/
+article {
+ 	padding:1%; /*set the amount of space on all four sides of the element's content box to be 1%*/
+ 	color: #000000; /*black*/;
+ 	background-color: #eae3d8; /*light grey*/
+}
+article h2 {margin-bottom:1%;} /*space after element */
+
+article img {
+	max-width:100%; /*max-width scales img to container */
+	margin-top: 2%; /*set the top margin of the element to be 2%*/
+	margin-right:2%; /*set the right margin of the element to be 2%*/
+}
+img.img3 {
+	display:block; /*changes the default behavior of element from an inline element to a block element.*/
+	text-align:center; /*center the text content within the element's container*/
+	width: 100%; /*set the width of the image to 100% of the available width of its containing element.*/
+	height: 250px; /*set the height of the image to a fixed value of 250 pixels.*/
+}
+
+/*SIDEBAR */
+aside {
+ 	color: #e4dff2; /*light purple*/
+ 	background: #b4a7d6; /*light purple*/
+ 	font-size: 95%; /*95% of parent body font of 1em, so equivalent to 0.95em */ 
+	font-variant: small-caps; /*display text in small capitals*/
+}
+ul.side {
+	list-style-type: none; /*remove the default bullet point  from the unordered list*/
+	background-color: #cec4e6; /*light purple*/
+	padding: 2%; /*set the amount of space between the content of an element and its border.*/
+}
+ul.side li a {
+	display: block; /*convert inline element ‘a’ to block element*/
+	color: #54287f; /*purple*/
+	text-decoration: none; /*remove decorations to text, such as underlines, overlines, and strikethroughs*/
+	font-family: "Lucida Handwriting"; /*set the font*/
+	font-size:1.4em; /*specify the size of the font used for text content*/
+}
+ul.side li a:hover {background-color: #eae3d8;} /*light grey*/
+	/*hide the menu items class of ‘hide’ when displayed on a mobile
+	screen, ie, before the media queries */
+
+/*DROPDOWN MENU*/	  
+.dropdown {
+	display: none; /*hide the menu*/
+	background-color: #54287f; /*purple*/
+	padding: 1px 1px; /*set the amount of space between the content of an element and its border.*/
+	line-height:1; /*set the height of a line box*/
+}	  
+.drop:hover .dropdown {
+	display: block; /*changes the default behavior of element from an inline element to a block element.*/
+}
+
+/*TABLE*/
+table, th, td {
+	border: 1px solid; /*set the border around an element, 1px value represents the width of the border,
+	while solid set the style of the border to be a solid line.*/
+}
+table {
+	width: 100%; /*set the width of the table*/
+	border-collapse: collapse; /*the border-collapse property in CSS is used to control how adjacent 
+	table cells should be separated. The collapse value specifies that the borders of adjacent cells 
+	should be collapsed into a single border.*/
+}
+th, td {
+	padding: 10px; /*set the amount of space between the content of an element and its border.*/
+}
+th {
+	height: 70px; /*make the cells in the header row have a height of 70 pixels.*/
+}
+td {
+	text-align: center; /*center the text content within the element's container*/
+}
+tr:hover {
+	background-color: #b4a7d6; /*light purple*/
+}
+
+th {
+	background-color: #54287f; /*purple*/
+	color: #e4dff2; /*light purple*/
+}
+
+/*GALLERY*/
+div.gallery {
+	margin: 5px; /*add space around an element, outside of any defined borders*/
+	border: 1px solid #ccc;
+	float: left; /*position an element to the left of its container*/
+	width: 180px; /*ses the width of images in gallery*/
+} 
+div.gallery:hover {
+	border: 1px solid #777;
+} 
+div.gallery img {
+	width: 100%; /*set the width of images in gallery*/
+	height: auto; /*means that the height of the image will automatically adjust to maintain 
+	its original aspect ratio when the width of the image is changed.*/
+} 
+div.desc {
+	padding: 15px; /*set the amount of space between the content of an element and its border.*/
+	text-align: center; /*center the text content within the element's container*/
+}
+
+/*FORM */
+input[type=text], select, textarea {
+  width: 100%; /*set the width of labels*/
+  padding: 12px; /*set the amount of space between the content of an element and its border.*/
+  border: 1px solid #cccccc; /*light gray*/
+  border-radius: 4px; /*add rounded corners*/
+}
+label {
+  padding: 12px 12px 12px 0; /*set the amount of space between the content of an element and its border.*/
+  display: inline-block;
+}
+input[type=submit] {
+  background-color: #04AA6D; /*green*/
+  color: #e4dff2; /*light purple*/
+  padding: 12px 20px; /*set the amount of space between the content of an element and its border.*/
+  border: none; /* remove border*/
+  border-radius: 4px; /*add rounded corners*/
+  cursor: pointer; /*change the mouse cursor to a pointer hand when the user hovers over an element. */
+  float: right; /*position an element to the right of its container*/
+}
+input[type=submit]:hover {
+  background-color: #45a049; /*green*/
+}
+.container {
+  border-radius: 5px; /*add rounded corners*/
+  background-color: #b4a7d6; /*light purple*/
+  padding: 20px; /*set the amount of space between the content of an element and its border.*/
+}
+.row::after { /* Clear floats after the columns */
+  content: "";
+  display: table;
+  clear: both;
+}
+.col-25, .col-75, input[type=submit] {
+	width: 100%; /*set the width of labels*/
+	margin-top: 0; /*no space around an element, outside of any defined borders*/
+}
+
+/*VIDEO*/
+iframe {
+	width:auto; /*set the width*/
+	height:auto; /*it means that the height of the image will automatically adjust 
+	to maintain its original aspect ratio when the width of the image is changed.*/
+	display: block; /*change the default behavior of element from an inline element to a block element.*/
+	margin: 0 auto; /*no space around an element, outside of any defined borders*/
+}
+
+/*FOOTER */
+footer {
+ 	color: #000000;  /*black*/
+ 	background-color: #dddddd; /*white*/
+ 	padding: 2% 2%; /*T/B and L/R*/ /*set the amount of space between the content of an element and its border.*/
+} 
+
+/*ICONS*/
+.fa {
+	padding: 0.5%; /*set the amount of space between the content of an element and its border.*/
+	font-size:30px !important; /*specify the size of the font used for text content*/
+}
+.fa:hover {background-color: #ffffff;} /*white*/
+.fa-youtube {color:#FF0000;} /*red*/
+.fa-twitter-square {color:#00acee;} /*light blue*/
+.fa-facebook-official {color:#4267B2;} /*blue*/
+.fa-instagram {color: #000000;} /*black*/
+
+
+/*MEDIA QUERIES*/
+@media screen and (min-width:600px){ /*min-width applies when viewport is equal or greater than the width*/
+header img {
+	width: auto; /*set the width of header img*/
+	height: 200px; /*set the height of header img*/
+}
+	
+nav li { /*Overriding AND adding new properties to selector – nav li*/
+border-bottom: none; /*Overwriting the border bottom on the <LI>s on the mobile CSS*/
+/* display:inline-block; Similar to float left to display the links side by side */
+width: 24%; } /*Adding widths:24% x 4 = 96% allowing for 2% padding left on nav ul for mobile CSS*/
+
+ul.side li {
+	border-bottom: 1px solid #e4dff2; /*light purple*/
+	width: 100%; /*set the width*/
+}
+
+article { /*Adding new properties to selector - article*/
+	width: 75%; /*set the width of article*/
+	float:right; /*position an element to the right of its container*/
+}
+
+/*IMAGES*/
+img.img1 {
+	float:left; /*position an element to the left of its container*/
+	margin: 10px 20px 10px 0px; /*add space around image, outside of any defined borders*/
+	width: 40%; /*set the width of image*/
+	height: 250px; /*set the height of image*/
+}
+img.img2 {
+	float:right; /*position an element to the right of its container*/
+	margin: -30px 30px 10px 0px; /*add space around image, outside of any defined borders*/
+	width: 50%; /*set the width of image*/
+}
+img.img3 {
+	float:left; /*position an element to the left of its container*/
+	margin: 10px 20px 10px 0px; /*add space around image, outside of any defined borders*/
+	width: 40%; /*set the width of image*/
+	height: 200px; /*set the height of image*/
+}
+
+/*VIDEO*/
+iframe {
+	width:560px; /*set the width of video*/
+	height:315px; /*set the height of video*/
+	display: block; /*change the default behavior of element from an inline element to a block element.*/
+	margin: 0 auto; /*no space around an element, outside of any defined borders*/
+}
+
+aside {/*Adding new properties to selector - aside */
+	margin-top: 0; /*no space around an element, outside of any defined borders*/
+	width: 25%; /*set the width of aside list*/
+ 	float: left; /*position an element to the left of its container*/
+}
+
+footer {/*Adding new properties to selector - footer */
+	clear :both;} /*clearing footer as following floated items*/
+
+ul.topnav li a {
+	display:inline-block; /*overwriting the display:block property*/
+	padding: 16px 20px; /*set the amount of space between the content of an element and its border.*/
+}
+
+ul.topnav li.hide, li.drop {display:inline-block;} /* overwriting the display:none property*/
+
+ul.topnav.toggleclass li {display:inline-block;} /* overwriting the display property that is
+	applied via the jQuery toggle() method */
+
+ul.topnav ul.dropdown li {display:block;}
+	
+ul.topnav li.icon {display:none;} /*Add a new selector to hide the burger menu*/
+
+ul.side li a {
+	display:block; /*overwriting the display:block property*/
+	padding: 10px ; /*set the amount of space between the content of an element and its border.*/
+}
+
+/*DROPDOWN MENU*/
+
+.dropdown {
+	position: absolute; /*the element is positioned relative to its nearest positioned ancestor element*/
+	background-color: #54287f; /*purple*/
+	box-shadow: 10px 10px 10px 10px #00000033; /*black*/
+	padding: 12px 16px; /*set the amount of space between the content of an element and its border.*/
+}
+.dropdown li {
+	list-style-type: none; /*removes the default bullet or marker from the list item*/
+	text-align:left; /*position text to the left of its container*/
+	line-height:1; /*set the height of a line box, which is the space between the baseline of one line of text 
+	and the baseline of the next line of text*/
+}
+
+.col-25 {
+  float: left; /*position an element to the left of its container*/
+  width: 25%; /*width of labels*/
+  margin-top: 6px; /*add space around labels, outside of any defined borders*/
+}
+.col-75 {
+  float: left; /*position an element to the left of its container*/
+  width: 75%; /*width of text input labels*/
+  margin-top: 6px; /*add space around text input labels, outside of any defined borders*/
+}
+}

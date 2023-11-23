@@ -1,0 +1,206 @@
+<!doctype html>
+
+<!--Author: Liliia Samosonok -->
+<!--HTML5 -->
+<!--Last updated: 17.04.2023 -->
+
+<html lang="en">
+<head>
+<title>Paint by Numbers Kits - Create an Account for Easy Checkout</title>
+<meta name="description" content="Register now to create an account and start enjoying the benefits of being a Painting by Number shop 
+member. With an account, you can save your favorite kits, track your orders, and enjoy faster checkout. 
+Plus, you'll be the first to know about new products and exclusive promotions. 
+Don't wait, visit our Registration page now and become a member!">
+
+<meta charset="utf-8">
+<meta name="viewport" content = "width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<header>
+		<a href="index.html"><img src= "images/avatar.gif"  alt="picture" class="avatar"></a>	
+	</header>
+
+	<main id="pagebody">
+		<nav>
+			<ul class="topnav">
+				<li class="icon"><a href="#">&#9776;&nbsp;MENU</a></li>
+				<li class= "hide"><a href="index.html">Home</a></li>
+				<li class= "drop"><a href="allPaintings.html">Shop</a>
+						<ul class="dropdown">
+						<li><a href="allPaintings.html">All paintings</a></li>
+						<li><a href="underConstruction.html">Bestsellers</a></li>
+						<li><a href="discount.html">Discount</a></li>
+						</ul>
+				</li>
+				<li class= "hide"><a href="registration.html">Registration</a></li>
+				<li class= "drop"><a href="about.html">Information</a>
+						<ul class="dropdown">
+						<li><a href="faqs.html">FAQs</a></li>
+						<li><a href="contactUs.html">Contact Us</a></li>
+						<li><a href="about.html">About</a></li>
+						</ul>
+				</li>	
+		   </ul>
+		   <!--link to jQuery and Javascript file -->
+		   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		   <script src="responsive.js"></script>
+		</nav>
+
+	
+
+	<article>
+	
+		<h2>Registration Form</h2>
+		<p>To make your shopping experience as smooth as possible, we ask that you please take a moment to register for an account.
+			Creating an account is quick and easy - simply fill out the form below with your name, email address, password, address, 
+			and phone number. Once you've registered, you'll be able to save your favorite products, track your orders, and access 
+			exclusive deals and promotions.</p>
+		<form>
+			<!--FIRST NAME-->
+			<div class="container">
+
+			<div class="row">
+    		<div class="col-25">
+				<label for = "firstname" class = "label">First Name:<span>*</span></label>
+			</div>
+    		<div class="col-75">
+				<input type = "text" name = "firstname" id= "firstname" placeholder = "Enter First Name"
+				maxlength ="30" required class="text">
+			</div>
+			</div>
+
+			<!--LAST NAME-->
+			<div class="row">
+			<div class="col-25">
+				<label for = "lastname" class = "label">Last Name:<span>*</span></label>
+			</div>
+    		<div class="col-75">
+				<input type = "text" name = "lastname" id= "lastname" placeholder = "Enter Last Name" 
+				maxlength ="30" required class="text">
+			</div>
+			</div>
+
+			<!--EMAIL-->
+			<div class="row">
+			<div class="col-25">
+				<label for = "email" class = "label">Email: <span>*</span></label>
+			</div>
+    		<div class="col-75">
+				<input type = "text" name = "email" id= "email" placeholder = "emailname@domainname.ie"
+				maxlength ="30" required class="text">
+			</div>
+			</div>
+
+			<!--PASSWORD-->
+			<div class="row">
+			<div class="col-25">
+				<label for="password" class = "label">Password:<span>*</span></label>
+			</div>
+    		<div class="col-75">
+				<input type="text" name="password" id="password" placeholder = "Enter Password"
+				maxlength ="30" required class="text">
+			</div>
+			</div>
+
+			<!--PASSWORD CONFIRMATION-->
+			<div class="row">
+			<div class="col-25">
+				<label for="confirm-password" class = "label">Confirm password:<span>*</span></label>
+			</div>
+    		<div class="col-75">
+				<input type="text" name="confirm-password" id="confirm-password" placeholder = "Confirm Password"
+				maxlength ="30" required class="text">
+			</div>
+			</div>
+
+			<!--ADDRESS 1-->
+			<div class="row">
+			<div class="col-25">
+				<label for = "address1" class = "label">Address line 1:<span>*</span></label>
+			</div>
+    		<div class="col-75">
+				<input type = "text" name = "address1" id= "address1" placeholder = "Street adress" 
+				maxlength ="50" required class="text">
+			</div>
+			</div>
+
+			<!--ADDRESS 2-->
+			<div class="row">
+			<div class="col-25">
+				<label for = "address2" class = "label">Address line 2:<span>*</span></label>
+			</div>
+    		<div class="col-75">
+				<input type = "text" name = "address2" id= "address2" placeholder = "Post town" 
+				maxlength ="30" required class="text">
+			</div>
+			</div>
+
+			<!--ADDRESS 3-->
+			<div class="row">
+			<div class="col-25">
+				<label for = "address3" class = "label">Address line 3:<span>*</span></label>
+			</div>
+    		<div class="col-75">
+				<input type = "text" name = "address3" id= "address3" placeholder = "Country" 
+				maxlength ="50" required class="text">
+			</div>
+			</div>
+
+			<!--EIRCODE-->
+			<div class="row">
+			<div class="col-25">
+				<label for = "eircode" class = "label">Eircode:<span>*</span></label>
+			</div>
+    		<div class="col-75">
+				<input type = "text" name = "eircode" id= "eircode" placeholder = "Eircode" 
+				maxlength ="10" required class="text">
+			</div>
+			</div>
+
+			<!--CHECKBOX -->
+			<div class="row">
+			<div class="col-25">
+				<label for = "signup" class = "label">Sign up for our Newsletter <span>*</span></label>
+			</div>
+    		<div class="col-75">
+				<input type = "checkbox" name = "signup" id = "signup" class="checkbox">
+				<input type = "submit" value = "Send Form">
+			</div>
+			</div>
+		</div>
+		</form>
+	</article><br>
+
+	<aside>
+		<h1>BUY NOW</h1>
+		<nav>
+			<ul class="side">
+				<li><a href="underConstruction.html">Abstraction</a></li>
+				<li><a href="underConstruction.html">Animals</a></li>
+				<li><a href="underConstruction.html">Christmas</a></li>
+				<li><a href="underConstruction.html">Cities</a></li>
+				<li><a href="underConstruction.html">Flowers</a></li>
+				<li><a href="underConstruction.html">Food</a></li>
+				<li><a href="underConstruction.html">Landscapes</a></li>
+				<li><a href="underConstruction.html">People</a></li>
+				<li><a href="underConstruction.html">Space</a></li>
+				<li><a href="underConstruction.html">Towers</a></li>
+			</ul>
+		</nav>
+	</aside>
+
+</main><hr>
+		<footer>
+			<strong>Email: </strong><a href ="mailto:20221784@bfei.ie">20221784@bfei.ie</a><br>
+			<strong>Last updated on:</strong> 17th April 2023<br>
+			<a href="https://www.youtube.com/@laurasstudio"><i class="fa fa-youtube"></i></a>
+			<a href="https://twitter.com/numbers_shop"><i class="fa fa-twitter-square"></i></a>
+			<a href="https://www.facebook.com/paintingbynumbersshop/"><i class="fa fa-facebook-official"></i></a>
+			<a href="https://www.instagram.com/paintbynumbers_shop/"><i class="fa fa-instagram"></i></a>
+		</footer>
+</body>
+</html>
